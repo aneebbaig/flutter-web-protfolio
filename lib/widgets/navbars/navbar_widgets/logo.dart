@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:web_portfolio_flutter/utils/design_constants.dart';
 
 class WebsiteLogo extends StatelessWidget {
   const WebsiteLogo({super.key});
@@ -6,8 +7,11 @@ class WebsiteLogo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: const Text(
-        'Class ANEEB extends Flutter',
+      child: Text(
+        'class Aneeb extends Flutter',
+        style: Theme.of(context).textTheme.headlineSmall!.copyWith(
+              color: DesignConstants.txtColorSecondary,
+            ),
       ),
     );
   }

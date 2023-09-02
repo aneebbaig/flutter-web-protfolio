@@ -16,7 +16,9 @@ class Sidebar extends StatelessWidget {
       // height: MediaQuery.sizeOf(context).height,
       color: DesignConstants.bgColorAppbar,
       child: const Column(
-        children: [WebsiteLogo()],
+        children: [
+          WebsiteLogo(),
+        ],
       ),
     );
   }
