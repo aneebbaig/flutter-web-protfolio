@@ -10,7 +10,7 @@ enum ResponsiveSize {
 ResponsiveSize determineResponsiveSize(double screenWidth) {
 
 
-  if (screenWidth >= pcScreenSize && screenWidth < double.infinity) {
+  if (screenWidth >= pcScreenSize) {
           return ResponsiveSize.desktop;
         } else if (screenWidth < pcScreenSize && screenWidth >= tabletScreenSize) {
           return ResponsiveSize.tablet;
