@@ -2,12 +2,22 @@ import 'package:flutter/material.dart';
 import 'package:web_portfolio_flutter/utils/design_constants.dart';
 import 'package:web_portfolio_flutter/widgets/navbars/navbar_widgets/logo.dart';
 
+import '../../models/webpage.dart';
 import '../../services/screen_service.dart';
 import 'navbar_widgets/my_navigation_rail.dart';
 import 'navbar_widgets/social_media_button.dart';
 
 class TabletSidebar extends StatelessWidget {
-  const TabletSidebar({super.key});
+  final Function(int) onTap;
+  final int currentIndex;
+  final List<Webpage> children;
+
+  const TabletSidebar({
+    super.key,
+    required this.currentIndex,
+    required this.children,
+    required this.onTap,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +35,11 @@ class TabletSidebar extends StatelessWidget {
         children: [
           const WebsiteLogo(),
           ScreenService.addHeight(context, percentage: 0.05),
-          const MyNavigationRail(),
+          MyNavigationRail(
+            currentIndex: currentIndex,
+            onTap: onTap,
+            children: children,
+          ),
           const SocialMediaButtons(),
         ],
       ),

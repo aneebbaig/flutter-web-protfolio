@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:web_portfolio_flutter/models/webpage.dart';
 import 'package:web_portfolio_flutter/services/screen_service.dart';
 import 'package:web_portfolio_flutter/utils/design_constants.dart';
 import 'package:web_portfolio_flutter/widgets/navbars/navbar_widgets/logo.dart';
@@ -8,7 +9,7 @@ import 'package:web_portfolio_flutter/widgets/navbars/navbar_widgets/social_medi
 class Sidebar extends StatelessWidget {
   final Function(int) onTap;
   final int currentIndex;
-  final List<Widget> children;
+  final List<Webpage> children;
 
   const Sidebar(
       {super.key,
@@ -33,12 +34,12 @@ class Sidebar extends StatelessWidget {
         children: [
           const WebsiteLogo(),
           ScreenService.addHeight(context, percentage: 0.05),
-          for (int index = 0; index < children.length; index++)
+          for (int i = 0; i < children.length; i++)
             SidebarItem(
-              text: 'Home',
-              isSelected: currentIndex == index,
+              text: children[i].label,
+              isSelected: currentIndex == i,
               onTap: onTap,
-              index: index,
+              index: i,
             ),
           const Spacer(),
           const SocialMediaButtons(),

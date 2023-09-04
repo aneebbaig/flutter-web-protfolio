@@ -30,7 +30,7 @@ class SidebarItem extends StatelessWidget {
               decoration: isSelected ? TextDecoration.lineThrough : null,
               decorationColor:
                   isSelected ? DesignConstants.secondaryColor : null,
-              decorationThickness: isSelected ? 2 : null,
+              decorationThickness: isSelected ? 4 : null,
             ),
       ),
     );
