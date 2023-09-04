@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:web_portfolio_flutter/models/webpage.dart';
 
 import '../screens/about_me/about_me_screen.dart';
-import '../screens/contact_me/contact_screen.dart';
+import '../screens/contact/contact_screen.dart';
 import '../screens/home/home_screen.dart';
 import '../screens/projects/project_screen.dart';
 import '../screens/skills/skills_screen.dart';
