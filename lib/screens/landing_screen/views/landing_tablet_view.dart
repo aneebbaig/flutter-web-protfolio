@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../widgets/navbars/navigation_rail.dart';
+import '../../../widgets/navbars/tablet_sidebar.dart';
 
 class LandingTabletView extends StatelessWidget {
   const LandingTabletView({super.key});
@@ -9,12 +9,12 @@ class LandingTabletView extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Row(
       children: [
-        MyNavigationRail(),
-        Expanded(
-          child: Center(
-            child: Text("Tablet View"),
-          ),
-        ),
+        TabletSidebar(),
+        // Expanded(
+        //   child: Center(
+        //     child: Text("Tablet View"),
+        //   ),
+        // ),
       ],
     );
   }

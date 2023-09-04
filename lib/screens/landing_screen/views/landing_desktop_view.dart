@@ -1,19 +1,35 @@
 import 'package:flutter/material.dart';
+import 'package:web_portfolio_flutter/utils/app_constants.dart';
 
 import '../../../widgets/navbars/sidebar.dart';
 
-class LandingDesktopView extends StatelessWidget {
+class LandingDesktopView extends StatefulWidget {
   const LandingDesktopView({super.key});
 
   @override
+  State<LandingDesktopView> createState() => _LandingDesktopViewState();
+}
+
+class _LandingDesktopViewState extends State<LandingDesktopView> {
+  int currentIndex = 0;
+
+  void _sidebarOnTap(int index) {
+    setState(() {
+      currentIndex = index;
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
       children: [
-        Sidebar(),
+        Sidebar(
+          currentIndex: currentIndex,
+          onTap: (index) => _sidebarOnTap(index),
+          children: AppConstants.websitePages,
+        ),
         Expanded(
-          child: Center(
-            child: Text("Desktop View"),
-          ),
+          child: AppConstants.websitePages[currentIndex],
         ),
       ],
     );

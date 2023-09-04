@@ -12,6 +12,7 @@ class AppTheme {
       bodySmall: GoogleFonts.roboto(fontSize: 16),
       bodyMedium: GoogleFonts.roboto(fontSize: 18),
       bodyLarge: GoogleFonts.roboto(fontSize: 25),
+      titleMedium: GoogleFonts.poppins(fontSize: 20),
     ),
   );
 }
