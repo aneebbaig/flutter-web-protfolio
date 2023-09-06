@@ -14,6 +14,6 @@ class ScreenService {
 
   static Widget addWidth(BuildContext context, {required percentage}) =>
       SizedBox(
-        height: getScreenWidth(context) * percentage,
+        width: getScreenWidth(context) * percentage,
       );
 }

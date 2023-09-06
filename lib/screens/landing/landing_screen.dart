@@ -12,8 +12,8 @@ class LandingScreen extends StatelessWidget {
     return const Scaffold(
       body: ResponsiveWrapper(
         desktop: LandingDesktopView(),
-        mobile: LandingMobileView(),
         tablet: LandingTabletView(),
+        mobile: LandingMobileView(),
       ),
     );
   }

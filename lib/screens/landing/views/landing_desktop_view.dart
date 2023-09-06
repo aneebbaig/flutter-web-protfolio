@@ -12,14 +12,6 @@ class LandingDesktopView extends StatefulWidget {
 }
 
 class _LandingDesktopViewState extends State<LandingDesktopView> {
-  int currentIndex = 0;
-
-  void _sidebarOnTap(int index) {
-    setState(() {
-      currentIndex = index;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     PagesProvider pagesProvider = Provider.of<PagesProvider>(context);
