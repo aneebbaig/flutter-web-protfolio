@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:web_portfolio_flutter/services/screen_service.dart';
 
 import '../../../models/webpage.dart';
 import '../../../utils/design_constants.dart';
@@ -24,6 +25,7 @@ class MyNavigationRail extends StatelessWidget {
         labelType: NavigationRailLabelType.none,
         backgroundColor: DesignConstants.bgColorAppbar,
         selectedIndex: currentIndex,
+        minWidth: ScreenService.getScreenWidth(context) * 0.2,
         destinations: [
           for (int i = 0; i < children.length; i++)
             NavigationRailDestination(

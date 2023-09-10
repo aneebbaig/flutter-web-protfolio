@@ -5,10 +5,12 @@ class RoundedButton extends StatelessWidget {
   final IconData icon;
   final Color color;
   final double buttonSize;
+  final double iconSize;
   const RoundedButton({
     super.key,
     required this.icon,
     required this.buttonSize,
+    required this.iconSize,
     this.color = DesignConstants.btnRoundIconColor,
   });
 
@@ -25,6 +27,7 @@ class RoundedButton extends StatelessWidget {
         child: Icon(
           icon,
           color: color,
+          size: iconSize,
         ),
       ),
       onTap: () {

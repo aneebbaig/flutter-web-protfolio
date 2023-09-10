@@ -9,18 +9,24 @@ class SocialMediaButtons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double buttonSize = ScreenService.getScreenWidth(context) * 0.05;
     bool isMobile = ResponsiveBreakpoints.of(context).isMobile;
+
+    double buttonSize = isMobile ? 30 : 40;
+
+    double iconSize = isMobile ? 15 : 35;
+
     List<Widget> children = [
       RoundedButton(
         icon: Icons.facebook,
         buttonSize: buttonSize,
+        iconSize: iconSize,
       ),
       ScreenService.addHeight(context, percentage: 0.01),
       ScreenService.addWidth(context, percentage: 0.01),
       RoundedButton(
         icon: Icons.facebook,
         buttonSize: buttonSize,
+        iconSize: iconSize,
       ),
     ];
     return isMobile

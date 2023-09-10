@@ -5,7 +5,7 @@ class ScreenService {
       MediaQuery.sizeOf(context).height;
 
   static double getScreenWidth(BuildContext context) =>
-      MediaQuery.sizeOf(context).height;
+      MediaQuery.sizeOf(context).width;
 
   static Widget addHeight(BuildContext context, {required percentage}) =>
       SizedBox(

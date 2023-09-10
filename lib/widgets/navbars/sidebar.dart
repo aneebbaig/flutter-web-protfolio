@@ -25,8 +25,8 @@ class Sidebar extends StatelessWidget {
         vertical: ScreenService.getScreenHeight(context) * 0.02,
       ),
       constraints: BoxConstraints(
-        maxWidth: ScreenService.getScreenWidth(context) * 0.3,
-        minWidth: ScreenService.getScreenWidth(context) * 0.25,
+        maxWidth: ScreenService.getScreenWidth(context) * 0.18,
+        minWidth: ScreenService.getScreenWidth(context) * 0.15,
       ),
       color: DesignConstants.bgColorAppbar,
       child: Column(
